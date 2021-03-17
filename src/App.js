@@ -1,30 +1,27 @@
 // import React
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 // import layouts
-import Header from './layout/Header'
-import Body from './layout/Body'
-import Footer from './layout/Footer'
+
 // import components
-import NewTask from './components/NewTask'
-import Tasks from './components/Tasks'
-import ShowBy from './components/ShowBy'
-import SortBy from './components/SortBy'
+
+// import pages
+import Dashboard from './pages/Dashboard'
+import Signup from './pages/Signup'
+import Login from './pages/Login'
+import Profile from './pages/Profile'
 // import styles
 import './styles/globals.css';
 
 function App() {
   return (
-    <div>
-        <Header />
-        <Body>
-          <NewTask />
-          <Tasks>
-            <ShowBy />
-            <SortBy />
-          </Tasks>
-        </Body>
-        <Footer />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/signup" exact component={Signup} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/profile" exact component={Profile} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

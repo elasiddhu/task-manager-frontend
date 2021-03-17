@@ -1,9 +1,17 @@
 .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
     background-color: var(--color-primary);
     height: var(--header-height);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img {
@@ -13,4 +21,11 @@
 
 .text {
     font-size: 2.4rem;
+}
+
+.nav {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
 }
