@@ -8,8 +8,8 @@ import Footer from '../layout/Footer'
 import ProfileCard from '../components/ProfileCard'
 // import styles
 
-
 export default function Profile() {
+
     return (
         <div>
             <Header />

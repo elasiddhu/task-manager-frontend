@@ -53,7 +53,7 @@
     transform: scale(1.1);
 }
 
-.login {
+.link_container {
     flex: 2;
     display: flex;
     align-items: center;
@@ -65,4 +65,13 @@
     text-decoration: none;
     font-weight: 600;
     margin-left: .5rem;
+}
+
+.p_style {
+    flex: 3;
+    padding: 0 2.5rem 0 2.5rem;
+}
+
+.error {
+    color: red;
 }

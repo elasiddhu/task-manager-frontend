@@ -35,8 +35,12 @@ html {
 body {
   /* makes it so border size is not caluclated in total width/height calcs */
   box-sizing: border-box;
+  /* sets minimum height to viewport height (no white space) and mix width to viewport width (no side scrolling) */
   min-height: 100vh;
   max-width: 100vw;
+
+  /* set initial typography settings */
+  font-size: 1.6rem;
 }
 
 /*               */
