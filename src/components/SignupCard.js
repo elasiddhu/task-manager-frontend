@@ -37,7 +37,7 @@ export default function Signup() {
         const didUserCreate = await createUser(payload)
         // do not return didUserCreate, this will return a 400: Bad Response
         console.log('didUserCreate', didUserCreate)
-        setUser(true)
+        setUser(didUserCreate)
     }
 
     return (

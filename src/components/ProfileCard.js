@@ -1,22 +1,17 @@
 // import React
-import { useState, useEffect} from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 // import layouts
-
 // import components
-
 // import styles
 import styles from '../styles/ProfileCard.module.css'
 // import utils
-import getMyProfile from '../utils/getMyProfile'
+// import contexts
+import { GlobalStore } from '../contexts/StoreContext'
 
 export default function ProfileCard() {
-    const [profile, setProfile] = useState()
-
-    useEffect(() => {
-        setProfile(getMyProfile())
-        console.log('ProfileCard.js useEffect() profile\n', profile)
-    }, [profile])
+    const { user } = useContext(GlobalStore)
+    console.log(Boolean(user.token))
 
     return (
         <div className={styles.container}>
@@ -27,7 +22,7 @@ export default function ProfileCard() {
             <div className={styles.data}>
                 <div className={styles.property}>
                     <div className={styles.property_header}>Name</div>
-                    <div className={styles.property_value}>{profile.user.name || 'fake name'}</div>
+                    <div className={styles.property_value}>{user.user.name || 'name'}</div>
                 </div>
                 <div className={styles.property}>
                     <div className={styles.property_header}>Avatar</div>
